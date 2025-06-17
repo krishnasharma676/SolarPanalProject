@@ -12,6 +12,7 @@ import Modal from "./components/Modal";
 import Container from "./components/Container";
 import { AnimatePresence } from "framer-motion";
 import Dashboard from "./components/Dashboard";
+import MainScreen from "./components/MainScreen";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -29,7 +30,7 @@ function App() {
   return (
     <Routes>
       <Route
-        path="/"
+        path="/home"
         element={
           <>
             <div className={isModalOpen ? "blur-sm pointer-events-none select-none transition-all" : ""}>
@@ -49,6 +50,7 @@ function App() {
         }
       />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/" element={<MainScreen />} />
     </Routes>
   );
 }
