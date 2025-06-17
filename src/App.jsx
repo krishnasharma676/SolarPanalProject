@@ -9,6 +9,7 @@ import SaveEarth from "./components/SaveEarth";
 import SocialFollow from "./components/SocialFollow";
 import Modal from "./components/Modal";
 import Container from "./components/Container";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,7 +44,9 @@ function App() {
       </div>
 
       {/* Modal */}
-      {isModalOpen && <Modal onClose={handleCloseModal} />}
+      <AnimatePresence>
+        {isModalOpen && <Modal onClose={handleCloseModal} />}
+      </AnimatePresence>
     </>
   );
 }
