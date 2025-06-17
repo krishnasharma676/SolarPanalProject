@@ -32,3 +32,25 @@ body {
 .bg-light-green{
   background-color: #20AF24;
 }
+
+/* width of scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* track (background) */
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+/* handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #20AF24;
+  border-radius: 10px;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:  #FFDD02;
+}
